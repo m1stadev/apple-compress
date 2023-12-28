@@ -20,7 +20,7 @@ from apple_compress import Algorithm, __version__, compress, decompress
     '-o',
     '--output',
     'output',
-    type=click.File('rb'),
+    type=click.File('wb'),
     help='Output file.',
     required=True,
 )
