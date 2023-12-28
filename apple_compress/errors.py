@@ -1,0 +1,2 @@
+class CompressionError(Exception):
+    pass

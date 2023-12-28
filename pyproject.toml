@@ -5,6 +5,9 @@ description = "Python bindings for Apple's libcompression."
 authors = ["m1stadev <adamhamdi31@gmail.com>"]
 readme = "README.md"
 
+[tool.poetry.scripts]
+acompress = "apple_compress.__main__:main"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 click = "^8.1.7"
