@@ -41,12 +41,6 @@ from apple_compress import Algorithm, __version__, compress, decompress
     help='LZFSE compress the data.',
 )
 @click.option(
-    '--brotli',
-    'compression_type',
-    flag_value='BROTLI',
-    help='Brotli compress the data.',
-)
-@click.option(
     '--zlib',
     'compression_type',
     flag_value='ZLIB',
