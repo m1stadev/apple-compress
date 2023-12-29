@@ -8,5 +8,5 @@ class Algorithm(Enum):
     LZMA = 0x306
     LZBITMAP = 0x702
     LZFSE = 0x801
-    LZFSE_SMALL = 0x891
+    LZFSE_IBOOT = 0x891
     BROTLI = 0xB02
