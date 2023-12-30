@@ -9,6 +9,19 @@ from .types import Algorithm
 
 
 def compress(data: bytes, algorithm: Algorithm) -> bytes:
+    """
+    Compresses the given data using the specified algorithm.
+
+    Args:
+        data (bytes): The data to be compressed.
+        algorithm (Algorithm): The compression algorithm to use.
+
+    Returns:
+        bytes: The compressed data.
+
+    Raises:
+        CompressionError: If the compression fails.
+    """
     logger.info(
         f'Compressing data ({len(data)} bytes) with algorithm: {algorithm.name}'
     )
@@ -31,6 +44,20 @@ def compress(data: bytes, algorithm: Algorithm) -> bytes:
 def decompress(
     data: bytes, algorithm: Algorithm, decmp_size: Optional[int] = None
 ) -> bytes:
+    """
+    Decompresses the given data using the specified algorithm.
+
+    Args:
+        data (bytes): The compressed data to be decompressed.
+        algorithm (Algorithm): The compression algorithm to use for decompression.
+        decmp_size (Optional[int]): The expected size of the decompressed data. If not provided, it is twice the size of `data`. Providing this value is recommended on resource-limited systems.
+
+    Returns:
+        bytes: The decompressed data.
+
+    Raises:
+        CompressionError: If the decompression fails.
+    """
     logger.info(
         f'Decompressing data ({len(data)} bytes) with algorithm: {algorithm.name}'
     )
