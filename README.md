@@ -9,7 +9,7 @@ Based on bindings from [Asahi Linux](https://github.com/AsahiLinux/asahi-install
 
 ## Usage
 ### Library
-Read [docs.md](https://github.com/m1stadev/apple-compress/blob/master/docs.md).
+Read the [API usage](https://github.com/m1stadev/apple-compress/wiki/API-Usage).
 
 ### CLI
 ```
