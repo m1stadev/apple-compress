@@ -35,7 +35,7 @@ def decompress(
 
         if size == decmp_size:
             # print('decode_buffer: buffer too small, running again with 1.5x larger buffer')
-            size *= 1.5
+            decmp_size = round(decmp_size * 1.5)
             continue
 
         return dest_buf.raw[:size]
