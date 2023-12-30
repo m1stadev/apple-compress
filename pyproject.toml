@@ -21,6 +21,7 @@ ignore = ["E722"]
 quote-style = "single"
 
 [tool.poetry.urls]
+"Documentation" = "https://github.com/m1stadev/apple-compress/blob/master/docs.md"
 "Bug Tracker" = "https://github.com/m1stadev/apple-compress/issues"
 
 [build-system]
