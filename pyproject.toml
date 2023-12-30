@@ -11,6 +11,7 @@ acompress = "apple_compress.__main__:main"
 [tool.poetry.dependencies]
 python = "^3.8"
 click = "^8.1.7"
+loguru = "^0.7.2"
 
 [tool.ruff.lint]
 extend-select = ["I"]
