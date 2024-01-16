@@ -2,6 +2,7 @@ import sys
 from typing import BinaryIO
 
 import click
+from loguru import logger
 
 from apple_compress import Algorithm, __version__, compress, decompress
 
@@ -62,7 +63,15 @@ def main(
 ) -> None:
     """A Python CLI tool for compression using Apple's libcompression."""
 
-    if not verbose:
+    if verbose:
+        logger.remove()
+        logger.add(
+            sys.stderr,
+            level='DEBUG',
+            format='[{time:MMM D YYYY - hh:mm:ss A zz}] {level} {module}:{line} {message}',
+        )
+        logger.enable(__package__)
+    else:
         sys.tracebacklimit = 0
 
     if sys.platform != 'darwin':
