@@ -38,12 +38,21 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     help='Decompress the data.',
 )
 @click.option(
+    '-l',
     '--lzfse',
     'compression_type',
     flag_value='LZFSE',
     help='LZFSE compress the data.',
 )
 @click.option(
+    '-b',
+    '--lzfse-iboot',
+    'compression_type',
+    flag_value='LZFSE_IBOOT',
+    help='LZFSE compress the data (iBoot compatible).',
+)
+@click.option(
+    '-z',
     '--zlib',
     'compression_type',
     flag_value='ZLIB',

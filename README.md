@@ -23,10 +23,11 @@ Options:
   -o, --output FILENAME  Output file.  [required]
   -c, --compress         Compress the data.
   -d, --decompress       Decompress the data.
-  --lzfse                LZFSE compress the data.
-  --zlib                 zlib compress the data.
+  -l, --lzfse            LZFSE compress the data.
+  -b, --lzfse-iboot      LZFSE compress the data (iBoot compatible).
+  -z, --zlib             zlib compress the data.
   -v, --verbose          Increase verbosity.
-  --help                 Show this message and exit.
+  -h, --help             Show this message and exit.
 ```
 
 ## Installation
