@@ -6,8 +6,10 @@ from loguru import logger
 
 from apple_compress import Algorithm, __version__, compress, decompress
 
+CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
-@click.command()
+
+@click.command(context_settings=CONTEXT_SETTINGS)
 @click.version_option(message=f'acompress {__version__}')
 @click.option(
     '-i',
