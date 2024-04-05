@@ -62,7 +62,7 @@ def decompress(
         f'Decompressing data ({len(data)} bytes) with algorithm: {algorithm.name}'
     )
 
-    if decmp_size is None:
+    if decmp_size is None or decmp_size == 0:
         logger.debug(
             f'No decompressed size provided, assuming data length * 2 ({len(data) * 2})'
         )
