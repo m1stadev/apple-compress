@@ -79,7 +79,7 @@ def main(
         logger.add(
             sys.stderr,
             level='DEBUG',
-            format='[{time:MMM D YYYY - hh:mm:ss A zz}] {level} {module}:{line} {message}',
+            format='[{time:MMM D YYYY - hh:mm:ss A zz}] {level} | {module}:{function}:{line} {message}',
         )
         logger.enable(__package__)
     else:
