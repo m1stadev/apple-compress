@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "apple-compress"
-version = "0.2.2"
+version = "0.2.3"
 description = "Python bindings for Apple's libcompression."
 authors = ["m1stadev <adamhamdi31@gmail.com>"]
 readme = "README.md"
@@ -12,6 +12,9 @@ acompress = "apple_compress.__main__:main"
 python = "^3.8"
 click = "^8.1.7"
 loguru = "^0.7.2"
+
+[tool.ruff]
+target-version = "py38"
 
 [tool.ruff.lint]
 extend-select = ["I"]
