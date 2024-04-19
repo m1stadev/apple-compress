@@ -1,0 +1,39 @@
+name: Upload Python Package
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build_pkgs:
+    name: Build packages
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build sdist
+        run: pipx run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: dist/*
+
+  pypi-publish:
+    name: Upload release to PyPI
+    runs-on: ubuntu-latest
+    environment:
+      name: PyPI
+      url: https://pypi.org/p/apple-compress
+    permissions:
+      id-token: write
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: packages
+          path: dist
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
