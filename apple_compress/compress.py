@@ -1,5 +1,6 @@
+from __future__ import annotations
+
 from ctypes import create_string_buffer
-from typing import Optional
 
 from loguru import logger
 
@@ -42,7 +43,7 @@ def compress(data: bytes, algorithm: Algorithm) -> bytes:
 
 
 def decompress(
-    data: bytes, algorithm: Algorithm, decmp_size: Optional[int] = None
+    data: bytes, algorithm: Algorithm, decmp_size: int | None = None
 ) -> bytes:
     """
     Decompresses the given data using the specified algorithm.
