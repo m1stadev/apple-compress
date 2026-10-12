@@ -6,7 +6,7 @@ from loguru import logger
 
 from apple_compress import Algorithm, __version__, compress, decompress
 
-CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+CONTEXT_SETTINGS = {'help_option_names': ['-h', '--help']}
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
