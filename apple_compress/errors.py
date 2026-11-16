@@ -5,5 +5,3 @@ class CompressionError(Exception):
     Attributes:
         None
     """
-
-    pass
